@@ -1,0 +1,73 @@
+version: '3.1'
+intents:
+- ask_VCC
+- ask_name
+- ask_product
+- ask_service_name
+- give_name
+- goodbye
+- greet
+- thanks
+- unclear
+- deny
+- begin_chatgpt
+- search_product
+entities:
+- user_name
+
+# slots:
+#   name:
+#     type: text
+#     influence_conversation: true
+#     mappings:
+#     - type: from_entity
+#       entity: user_name
+
+responses:
+  utter_greet:
+  - text: "Xin chào! Tôi là trợ lý mua sắm.\nTôi có thể giúp bạn tìm kiếm sản phẩm, đặt hàng và trả lời các câu hỏi liên quan đến mua sắm. Bạn có thể hỏi về các sản phẩm cụ thể, thông tin về giá cả, chất lượng sản phẩm, hoặc bất kỳ câu hỏi nào liên quan đến dịch vụ. Hãy cho tôi biết nếu bạn có bất kỳ câu hỏi nào khác!"
+  - text: "Chào bạn! Tôi là trợ lý mua sắm.\nTôi có thể giúp bạn tìm kiếm sản phẩm, đặt hàng và trả lời các câu hỏi liên quan đến mua sắm. Bạn có thể hỏi về các sản phẩm cụ thể, thông tin về giá cả, chất lượng sản phẩm, hoặc bất kỳ câu hỏi nào liên quan đến dịch vụ. Hãy cho tôi biết nếu bạn có bất kỳ câu hỏi nào khác!"
+
+  # utter_greet_name:
+  # - text: "Xin chào {name}!\nRất vui được gặp {name}.Bạn có câu hỏi hoặc yêu cầu cụ thể nào liên quan đến dịch vụ  mua sắm của VCC không? Tôi sẽ cố gắng giúp bạn một cách tốt nhất."
+  
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+
+  utter_goodbye:
+  - text: "Rất vui được giúp bạn!\nNếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào khác, hãy để tôi biết. Tôi sẽ cố gắng giúp bạn trong khả năng của mình. Chúc bạn có một trải nghiệm mua sắm tuyệt vời!"
+  
+  # utter_goodbye_name:
+  # - text: "Tôi rất vui được giúp {name}!\n Nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào khác, hãy để tôi biết. Tôi sẽ cố gắng giúp bạn trong khả năng của mình. Chúc bạn có một trải nghiệm mua sắm tuyệt vời!!"
+
+  utter_ask_service_name:
+  - text: "\nTôi có thể thực hiện những yêu cầu sau: 
+          \n1. Tìm kiếm sản phẩm mà quý khách cần 
+          \n2. Đưa ra các thông tin chi tiết về sản phẩm 
+          \n3. Đưa ra giá thành sản phẩm với số tiền bạn có
+          \n4. Gợi ý những sản phẩm tương tự
+          \nHãy cho tôi biết bạn quan tâm đến dịch vụ nào, hoặc nếu bạn cần thêm thông tin chi tiết về bất kỳ dịch vụ nào."
+
+  utter_unclear:
+  - text: "Xin lỗi, nhưng tôi không hiểu câu hỏi của bạn. Bạn có thể giải thích rõ hơn được không? Tôi sẽ cố gắng giúp bạn."
+  
+  utter_thanks:
+  - text: "Cảm ơn bạn về lời khen!\nTôi được thiết kế để hỗ trợ bạn trong việc mua sắm và cung cấp thông tin chi tiết về sản phẩm, giá cả và các dịch vụ của VCC. Nếu bạn có bất kỳ câu hỏi nào hoặc cần giúp đỡ về mua sắm, hãy nói cho tôi biết và tôi sẽ cố gắng giúp bạn một cách tốt nhất."
+  
+  # utter_thanks_name:
+  # - text: "Cảm ơn {name} về lời khen!\nTôi được thiết kế để hỗ trợ bạn trong việc mua sắm và cung cấp thông tin chi tiết về sản phẩm, giá cả và các dịch vụ của VCC. Nếu bạn có bất kỳ câu hỏi nào hoặc cần giúp đỡ về mua sắm, hãy nói cho tôi biết và tôi sẽ cố gắng giúp bạn một cách tốt nhất."
+  
+  utter_ask_VCC:
+  - text: "Giám đốc VCC là anh Hưng"
+
+  utter_iamabot:
+  - text: "Xin chào! Tôi là trợ lý mua sắm.\nTôi có thể giúp bạn tìm kiếm sản phẩm, đặt hàng và trả lời các câu hỏi liên quan đến mua sắm. Bạn có thể hỏi về các sản phẩm cụ thể, thông tin về giá cả, chất lượng sản phẩm, hoặc bất kỳ câu hỏi nào liên quan đến dịch vụ. Hãy cho tôi biết nếu bạn có bất kỳ câu hỏi nào khác!"
+  
+actions:
+- action_extract_name
+- action_default_fallback
+- action_search_product
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

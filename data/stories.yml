@@ -1,0 +1,71 @@
+version: "3.1"
+
+stories:
+
+- story: bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: deny
+  steps:
+  - intent: deny
+  - action: utter_unclear
+  
+# chao hoi
+- story: path0
+  steps:
+   - intent: greet
+   - action: utter_greet
+
+# hoi ten
+- story: path1
+  steps:
+   - intent: give_name
+   - action: action_extract_name
+  #  - intent: thanks
+  #  - action: utter_thanks_name
+  #  - intent: goodbye
+  #  - action: utter_goodbye_name
+#
+- story: path2
+  steps:
+   - intent: ask_VCC
+   - action: utter_ask_VCC
+
+# cam on
+- story: path3
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+# hoi dich vu
+- story: path4
+  steps:
+  - intent: ask_service_name
+  - action: utter_ask_service_name
+
+#hoi san pham
+- story: path5
+  steps:
+  - intent: ask_product
+  - action: utter_ask_service_name
+  - intent: deny
+  - action: utter_unclear
+
+# hoi bot
+- story: path6
+  steps:
+  - intent: ask_name
+  - action: utter_iamabot
+
+# hoi botgpy
+- story: path7
+  steps:
+  - intent: begin_chatgpt
+  - action: action_default_fallback
+
+- story: path8
+  steps:
+  - intent: search_product
+  - action: action_search_product

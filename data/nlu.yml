@@ -1,0 +1,243 @@
+version: "3.1"
+nlu:
+- intent: give_name
+  examples: |
+    - Tôi tên là [Nam]{"entity": "user_name"}
+    - Chị tên là [Hoa]{"entity": "user_name"}
+    - Anh tên là [Long]{"entity": "user_name"}
+    - Mình tên là [Phúc]{"entity": "user_name"}
+    - Mình tên [Phát]{"entity": "user_name"}
+    - Em tên [Hà]{"entity": "user_name"} nhé
+    - Huy[Nam]{"entity": "user_name"}
+    - Gọi mình là [Phụng]{"entity": "user_name"} nha
+    - Tôi tên [Hoàng]{"entity": "user_name"}
+    - chị tên [Cúc]{"entity": "user_name"}
+    - anh tên [Đức]{"entity": "user_name"}
+    - [Tuấn]{"entity": "user_name"} nhé
+    - [Bình]{"entity": "user_name"}
+    - [Lĩnh]{"entity": "user_name"}
+    - [Viễn]{"entity": "user_name"}
+    - [Duy]{"entity": "user_name"}
+    - [Tú]{"entity": "user_name"}
+    - [Tâm]{"entity": "user_name"}
+    - [Xuân]{"entity": "user_name"}
+    - [Kiều]{"entity": "user_name"}
+    - [Thành]{"entity": "user_name"}
+    - [Đăng]{"entity": "user_name"}
+    - [Bình]{"entity": "user_name"}
+    - [Đạt]{"entity": "user_name"}
+    - [Vy]{"entity": "user_name"}
+    - [Loan]{"entity": "user_name"}
+    - [Luân]{"entity": "user_name"}
+    - [Quang]{"entity": "user_name"}
+    - [Thuận]{"entity": "user_name"}
+    - [Trọng]{"entity": "user_name"}
+    - [An]{"entity": "user_name"}
+    - [Kim]{"entity": "user_name"}
+    - [Hằng]{"entity": "user_name"}
+    - [Cường]{"entity": "user_name"}
+    - [Phú]{"entity": "user_name"}
+    - [Thiện]{"entity": "user_name"}
+    - Anh [Huy]{"entity": "user_name"}
+    - anh [Long]{"entity": "user_name"}
+    - Chị [Linh]{"entity": "user_name"}
+    - chị [Huyền]{"entity": "user_name"}
+    - là [Minh]{"entity": "user_name"}
+    - là [David]{"entity": "user_name"}
+    - tên [Sung]{"entity": "user_name"}
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - khong
+    - không đâu
+    - đéo
+    - không đồng ý
+    - không thích
+    - ko
+    - cc
+    - không nhé
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - không đời nào
+    - hoàn toàn không
+    - không
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Xin chào
+    - Bạn ơi cho mình hỏi
+    - em ơi, cho anh hỏi
+    - em ơi, cho chị hỏi
+    - xin chào
+    - xin chào !
+    - xinn chào
+    - có ai ko
+    - có ai ở đây không
+    - is there anyone
+    - anyone here
+    - chào
+    - có ai không
+    - alo
+    - alo alo
+    - cốc cốc
+    - chào em
+    - cứu với
+    - giúp tôi
+    - giúp với
+    - cứu
+    - xin chao
+    - 2
+    - helo
+    - bạn là ai
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - chào nhé
+    - tạm biệt
+    - chào tạm biệt
+    - bai bai
+    - bai
+    - bái bai
+    - bb
+    - nói chuyện sau nhé
+    - tạm bịt
+    - bai bot
+    - gút bai
+    - good bye
+    - baibai
+    - pp
+- intent: thanks
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+    - Cảm ơn em
+    - tốt quá
+    - bot làm rất tốt
+    - tốt thật
+    - tuyệt vời
+    - rất nhanh
+    - giỏi quá
+    - bot thông minh đấy
+    - hay phết nhỉ
+    - tốt đấy
+    - tôi rất hài lòng
+    - chatbot mạnh dữ
+    - thông minh quá ta
+    - giỏi
+    - hay
+    - ổn phết
+    - xong rồi cảm ơn
+    - cảm ơn em
+- intent: ask_name
+  examples: |
+    - bạn tên gì
+    - tên gì
+    - chị tên gì
+    - anh tên gì
+    - tên của bạn là gì
+    - tên của chị là gì
+    - tên của anh là gì
+    - cho mình hỏi tên nhé
+    - mình muốn biết tên bạn
+    - mình muốn tiện xưng hộ hơn, cho mình biết tên nhé
+    - để tiện xưng hộ thì tên bạn là gì
+    - cho em xin tên của anh ạ
+    - cho em xin tên của chị ạ
+    - được biết tên bạn thì tốt nhỉ
+    - vui lòng cho mình biết tên nhé
+- intent: ask_service_name
+  examples: |
+    - có những dịch vụ gì nhỉ
+    - [Chị](cust_sex) muốn xem danh sách dịch vụ
+    - [Anh](cust_sex) muốn xem danh sách dịch vụ
+    - [Em](cust_sex) muốn xem danh sách dịch vụ
+    - mình muốn xem danh sách dịch vụ
+    - tôi muốn xem danh sách dịch vụ
+    - [chú](cust_sex) muốn xem danh sách dịch vụ
+    - [bác](cust_sex) muốn xem danh sách dịch vụ
+    - [cô](cust_sex) muốn xem danh sách dịch vụ
+    - cho [Chị](cust_sex) xem danh sách dịch vụ
+    - cho [Anh](cust_sex) xem danh sách dịch vụ
+    - cho [Em](cust_sex) xem danh sách dịch vụ
+    - cho [chú](cust_sex) xem danh sách dịch vụ
+    - cho [bác](cust_sex) xem danh sách dịch vụ
+    - cho [cô](cust_sex) xem danh sách dịch vụ
+    - có những dịch vụ gì
+    - cho tôi xem dịch vụ
+    - hỏi dịch vụ
+    - co dich vu nao
+    - Bên em có những dịch vụ gì
+    - dich vu
+    - hoi dich vu
+    - tôi muốn hỏi dịch vụ
+    - xem dịch vụ
+    - bạn có thể làm gì nào
+    - em có thể giúp gì cho tôi
+    - bạn biết làm gì
+    - mày được việc không
+    - [chị](cust_sex) muốn xem dịch vụ bên em
+    - có mấy dịch vụ nhỉ?
+    - bot có gì
+    - bot làm được gì
+    - bạn làm được gì
+    - bot biết gì
+    - giúp gì
+    - giúp được gì
+
+- intent: search_product
+  examples: |
+    - Tôi muốn hỏi số lượng sản phẩm điều hòa?
+    - Bạn có thể cho biết giá của sản phẩm điều hòa không?
+    - Xin hỏi sản phẩm lò vi sóng có giá là bao nhiêu vậy?
+    - Xin thông tin mô tả về đèn năng lượng mặt trời?
+    - Bình nước nóng có dung tích là bao nhiêu?
+    - Bạn có thể cho tôi biết giá và số lượng sản phẩm A được không?
+    - Thông số mô tả của sản phẩm máy hút bụi?
+    
+- intent: begin_chatgpt
+  examples: |
+    - Ai là người giàu nhất thế giới?
+    - Ai là người đẹp nhất?
+    - 1+1=?
+
+- intent: ask_VCC
+  examples: |
+    - Giám đốc VCC?
+    - Tổng giám đốc VCC là ai?
+    - Giám đốc là ai?
